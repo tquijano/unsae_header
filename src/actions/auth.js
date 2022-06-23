@@ -74,7 +74,7 @@ export const startChecking =()=>{
     const id = localStorage.getItem('Identificacion')
     return async ( dispatch ) => {
 
-      if( typeUser !== 0){
+      if( typeUser != 0){
         dispatch( login ({
           uid: typeUser,
           id: id,
