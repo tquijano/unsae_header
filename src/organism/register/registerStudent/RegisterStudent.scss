@@ -1,0 +1,55 @@
+@import '../../../assets/sass/custom';
+.register-container {
+    background: white;
+    border: 2px solid $primary-color;
+    height: 33.5rem;
+    width: 30rem;
+    border-radius: 25px;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .login_title {
+        font-size: 2rem;
+        line-height: 2rem;
+        font-family: Ancizar Bold;
+        text-align: start;
+        color: black;
+    }
+    .login_text {
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+        font-family: Ancizar Sans;
+        text-align: start;
+        color: black;
+    }
+    .register-container__form {
+        // background: $secondary-color;
+        &_group {
+            height: 6rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        &_input {
+            height: 4.5rem;
+            width: 100%;
+            border-radius: 10px;
+            padding: 1rem;
+        }
+        &_label {
+            font-size: 1.2rem;
+            line-height: 1.5rem;
+            font-family: Ancizar Sans;
+            text-align: start;
+            color: black;
+        }
+        &_button {
+            width: 10rem;
+            height: 3.5rem;
+            border-radius: 10px;
+            color: white;
+            background-color: $primary-color;
+        }
+    }
+}

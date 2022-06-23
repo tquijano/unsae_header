@@ -1,0 +1,10 @@
+@import '../../assets/sass/custom';
+.generalInfo-container {
+    gap: 30px;
+    flex-direction: column;
+    display: flex;
+    padding: 3% 5%;
+    h1 {
+        color: $primary-color;
+    }
+}

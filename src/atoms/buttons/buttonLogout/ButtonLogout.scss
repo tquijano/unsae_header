@@ -1,0 +1,17 @@
+.buttonLogout{
+  width: 150px;
+  height: 30px;
+  border-radius: 6px;
+  background: #30B3AB;
+  border: 0px;
+  color: white;
+  font-size: 18px;
+  letter-spacing: 1px;
+  &:hover{
+    transform: scale(0.95);
+    // transition: transform 0.8s;
+  }
+  &:focus{
+    outline: none;
+  }
+}

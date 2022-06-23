@@ -1,0 +1,33 @@
+@font-face {
+  font-family: 'Ancizar Sans';
+  src: local('ancizar_sans-regular-webfont'), url('./assets/fonts/ancizar_sans-regular-webfont.ttf');
+}
+
+@font-face {
+  font-family: 'Ancizar Bold';
+  src: local('ancizar_sans-bold-webfont'), url('./assets/fonts/ancizar_sans-bold-webfont.ttf');
+}
+
+@font-face {
+  font-family: 'Ancizar Extra Bold';
+  src: local('ancizar_sans-extrabold-webfont'), url('./assets/fonts/ancizar_sans-extrabold-webfont.ttf');
+}
+
+
+body {
+  margin: 0;
+  font-family: Ancizar Sans, Ancizar Bold, Ancizar Extra Bold, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: Ancizar Sans, Ancizar Bold, Ancizar Extra Bold, source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+*{
+  box-sizing: border-box;
+}

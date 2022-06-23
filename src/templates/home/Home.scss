@@ -1,0 +1,15 @@
+.home{
+  padding: 2%;
+  display: flex;
+  &_login{
+    flex: 25%;
+  }
+  &_info{
+    flex: 75%;
+    padding: 0 2%;
+  }
+  &_cards{
+    display: flex;
+    // justify-content: center;
+  }
+}

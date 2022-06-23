@@ -1,0 +1,13 @@
+@import '../../assets/sass/custom';
+
+.createInformation_button{
+  border: none;
+  color: $primary-color;
+  background: white;
+  &:focus{
+    outline: none;
+  }
+  &:hover{
+    font-size: 17px;
+  }
+}

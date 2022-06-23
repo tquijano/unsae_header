@@ -1,0 +1,23 @@
+.student{
+  display: flex;
+  &_container{
+    flex: 80%;
+    display: flex;
+    align-items: flex-start;
+    &--history{
+      flex: 75%;
+      padding: 3% 5%;
+    }
+    &--request{
+      padding: 3%;
+      flex: 25%;
+      border-left: 2px solid #E6ECEF;
+      height: 100%;
+    }
+  }
+  &_navbar{
+    background: #F5F7F9;
+    flex: 20%;
+  }
+
+}

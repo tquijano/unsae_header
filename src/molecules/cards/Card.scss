@@ -1,0 +1,74 @@
+@import '../../assets/sass/custom';
+
+.card{
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  height: 20rem;
+  width: 20rem;
+  border: 0;
+  margin: 0 8% 0 0;
+
+  &_side{
+    height: 20rem;
+    transition: all .8s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden;
+    border-radius: 20px;
+    box-shadow: 10px 10px 23px 2px rgba(0,0,0,0.23);
+    
+
+    &--front{
+      background: linear-gradient(to right bottom,#26D0CE, #1A2980);
+
+    }
+    &--back{
+      transform: rotateY(180deg);
+      background: $primary-color;
+      color: white;
+      text-align: center;
+
+    }
+  }
+
+  &:hover &_side--front{
+    transform: rotateY(-180deg);
+  }
+
+  &:hover &_side--back{
+    transform: rotateY(0);
+  }
+
+  &_img{
+    height: 20rem;
+    background-size: cover;
+    background-blend-mode: screen;
+    border-radius: 20px;   
+    background-position: center;
+    overflow: hidden;
+    &--1{
+      background-image: linear-gradient( $primary-color, $primary-color),url(../../assets/img/card1.jpg);
+    }
+    &--2{
+      background-image: linear-gradient( $primary-color, $primary-color),url(../../assets/img/card2.jpg);
+    }
+  }
+
+  &_heading {
+    font-size: 2.8rem;
+    line-height: 2rem;
+    font-weight: 300;
+    font-family: Ancizar Extra Bold;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    position: absolute;
+    top: 8rem;
+    // right: 2rem;
+    // width: 75%;
+  }
+  
+}

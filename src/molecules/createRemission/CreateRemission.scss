@@ -1,0 +1,14 @@
+@import '../../assets/sass/custom';
+.createRemission_button {
+    border: none;
+    height: 2vw;
+    color: white;
+    background: #30B3AB;
+    border-radius: 10px;
+    &:focus {
+        outline: none;
+    }
+    &:hover {
+        font-size: 17px;
+    }
+}
