@@ -1,16 +1,5 @@
 
-// const state = {
-//   name: 'Estudiante',
-//   logged: true
-// }
 
-// const loginAction = {
-//   type: types.login,
-//   payload: {
-//     name: 'Estudiante',
-//     rol: 'Estudiante'
-//   }
-// }
 import { types } from "../types/types";
 
 const insialState = {

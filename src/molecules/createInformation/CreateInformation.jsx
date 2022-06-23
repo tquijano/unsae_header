@@ -1,15 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Swal from "sweetalert2";
 import { createObservation } from "../../actions/observations";
 import "./CreateInformation.scss";
 
 const CreateInformation = ({ data }) => {
-  const { user, id } = useSelector((state) => state.auth);
+  const { id } = useSelector((state) => state.auth);
   //En textInfo esta lo que se creo
   const dispatch = useDispatch();
   console.log("data create", data);
-  const [textInfo, setTextInfo] = useState("");
   const handleCreate = async () => {
     const { value: text } = await Swal.fire({
       input: "textarea",
@@ -23,7 +22,6 @@ const CreateInformation = ({ data }) => {
 
     if (text) {
       console.log("data", data);
-      setTextInfo(text);
       dispatch(
         createObservation(
           data.documento_estudiante,

@@ -6,7 +6,6 @@ export const getPendingTutor = ( type_user, documento, setDataTutorialPending ) 
       const resp = await fetchSinToken(`tutoriasPenYAce?id_tipo_usuario=${type_user}&documento=${documento}`);
       console.log(resp);
       const body = await resp.json();
-      // console.log(body);
       if (body) {
         setDataTutorialPending(data => [...data, body])
         console.log(`salio bien ${type_user === 1 ? ' estudiante': ' docente'} tutorias pendientes`, body)

@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 import Searcher from "../../molecules/searcher/Searcher";
 import CreateInformation from "../../molecules/createInformation/CreateInformation";
 import "./Observation.scss";
 import ViewInformation from "../../molecules/viewInformation/ViewInformation";
-import { useSelector } from "react-redux";
 import Saludo from "../../assets/img/ola.gif";
 import {
   getObservationDocente,

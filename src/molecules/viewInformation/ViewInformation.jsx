@@ -4,7 +4,6 @@ import "./ViewInformation.scss";
 
 const ViewInformation = ({ observacion }) => {
   console.log(observacion);
-  const numbers = [1, 5, 10, 15, 16];
   const handleView = () => {
     Swal.fire({
       title: "Observaciones",

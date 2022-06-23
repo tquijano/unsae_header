@@ -52,7 +52,6 @@ export const getRemissions= ( setDataRemission ) => {
       const resp = await fetchSinToken('bienestar/remisiones');
       console.log(resp);
       const body = await resp.json();
-      // console.log(body);
       if (body) {
           setDataRemission( [body])
       } else {
@@ -71,7 +70,7 @@ export const createRemission = (documento_docente, documento_estudiante,codigo_p
       console.log(resp);
       const body = await resp.json();
       console.log('create obervation',body);
-      if (body.status == true) {
+      if (body.status ) {
       Swal.fire("Remision exitosamente creada");
 
     } else {

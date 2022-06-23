@@ -1,4 +1,3 @@
-import Swal from "sweetalert2";
 import { fetchSinToken } from "../helpers/fetch";
 
 export const getHistoryTutorStudent = ( documento_estudiante, setDataTutorialHistory ) => {
@@ -6,7 +5,6 @@ export const getHistoryTutorStudent = ( documento_estudiante, setDataTutorialHis
       const resp = await fetchSinToken(`estudiante/tutorias/historial?documentoEstudiante=${documento_estudiante}`);
       console.log(resp);
       const body = await resp.json();
-      // console.log(body);
       if (body) {
         setDataTutorialHistory(data => [...data, body])
         console.log('salio bien', body)
@@ -22,7 +20,6 @@ export const getHistoryTutorTeacher = ( documento_docente, setDataTutorialHistor
       const resp = await fetchSinToken(`docente/tutorias/historial?documentoDocente=${documento_docente}`);
       console.log(resp);
       const body = await resp.json();
-      // console.log(body);
       if (body) {
         setDataTutorialHistory(data => [...data, body])
         console.log('salio bien docentes', body)
@@ -38,7 +35,6 @@ export const getHistoryTutor = ( setDataTutorialHistory) => {
       const resp = await fetchSinToken('bienestar/tutorias/historial');
       console.log(resp);
       const body = await resp.json();
-      // console.log(body);
       if (body) {
         setDataTutorialHistory(data => [...data, body])
         console.log('salio bien bienestar', body)

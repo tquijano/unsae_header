@@ -43,7 +43,6 @@ const Tutor = () => {
     console.log("Envie lo datos");
   };
 
-  // console.log(dataTutor[0]);
   return (
     <div>
       <p>Buscar Estudiante</p>

@@ -8,7 +8,6 @@ export const getDocentes = (setDataTutor) => {
         const resp = await fetchSinToken('bienestar/docentes');
         console.log(resp);
         const body = await resp.json();
-        // console.log(body);
         if (body) {
             setDataTutor(datas => [...datas, body])
         } else {
@@ -33,7 +32,6 @@ export const getDataStudent = (id_estudiante, setDataPlanValue) => {
 export const tutorAssignment = (documentoEstudiante, documentoDocente, codigoPlan) => {
     return async(dispatch) => {
         console.log(documentoEstudiante, documentoDocente, codigoPlan)
-            // auth es el enpoint
         const resp = await fetchSinToken('ingresoTutor', { documentoEstudiante, documentoDocente, codigoPlan }, 'POST');
 
         console.log(resp);
@@ -46,7 +44,6 @@ export const tutorAssignment = (documentoEstudiante, documentoDocente, codigoPla
 export const searchStudent = (teacher, setDataStudent) => {
     return async(dispatch) => {
         console.log(teacher)
-            // auth es el enpoint
         const resp = await fetchSinToken(`ingresoTutor?documentoDocente=${teacher}`);
 
         console.log(resp);
@@ -63,7 +60,6 @@ export const searchStudent = (teacher, setDataStudent) => {
 export const searchTeacher = (student, setDataTeacher) => {
     return async(dispatch) => {
         console.log(student)
-            // auth es el enpoint
         const resp = await fetchSinToken(`ingresoTutor?documentoEstudiante=${student}`);
 
         console.log(resp);
@@ -98,7 +94,7 @@ export const tutorshipAssignment = (documento_docente, documento_estudiante, fec
         const resp = await fetchSinToken(`manipularTutoria`, { documento_docente, documento_estudiante, fecha_tutoria, tipo_usuario, id_estado_tutoria }, 'POST');
         console.log('tutorAsingment', resp)
         const body = await resp.json();
-        if (body.status == true){
+        if (body.status){
             Swal.fire({
                 title:
                   "Tutoria agendada",

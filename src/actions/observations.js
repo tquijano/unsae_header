@@ -22,7 +22,6 @@ export const getObservations= (setDataObservations) => {
       const resp = await fetchSinToken(`observaciones/all`);
       console.log(resp);
       const body = await resp.json();
-      // console.log(body);
       if (body) {
           setDataObservations(datas => [...datas, body])
       } else {
@@ -35,13 +34,12 @@ export const getObservations= (setDataObservations) => {
 export const createObservation = (documento_estudiante, documento_docente, codigo_plan, observacion) => {
   return async(dispatch) => {
       console.log(documento_estudiante, documento_docente, codigo_plan, observacion)
-          // auth es el enpoint
       const resp = await fetchSinToken('observaciones', { documento_docente, documento_estudiante, codigo_plan, observacion }, 'POST');
 
       console.log(resp);
       const body = await resp.json();
       console.log('create obervation',body);
-      if (body.status == true) {
+      if (body.status) {
       Swal.fire("Observacion exitosamente creada");
 
     } else {

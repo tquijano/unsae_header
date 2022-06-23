@@ -1,7 +1,6 @@
 import { useSelector } from 'react-redux';
 import { Route, Routes } from 'react-router-dom';
 import Coordinator from '../templates/coordinator/Coordinator';
-import Students from '../templates/students/Students';
 
 const CoordinatorRoutes = () => {
 
