@@ -13,14 +13,14 @@
   .login_title{
     font-size: 2rem;
     line-height: 2rem;
-    font-family: Ancizar Bold;
+    font-family: Ancizar Bold, Arial;
     text-align: start;
     color: black;
   }
   .login_text{
     font-size: 1.2rem;
     line-height: 1.5rem;
-    font-family: Ancizar Sans;
+    font-family: Ancizar Sans, Arial;
     text-align: start;
     color: black;
   }
@@ -42,7 +42,7 @@
     &_label{
       font-size: 1.2rem;
       line-height: 1.5rem;
-      font-family: Ancizar Sans;
+      font-family: Ancizar Sans, Arial;
       text-align: start;
       color: black;
     }
