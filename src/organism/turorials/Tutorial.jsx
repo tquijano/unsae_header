@@ -1,7 +1,6 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Searcher from "../../molecules/searcher/Searcher";
 import Saludo from "../../assets/img/ola.gif";
-import { useState } from "react";
 import "./Tutorial.scss";
 import Cards_tutor from "../../molecules/cards_tutor/Cards_tutor";
 import { useDispatch } from "react-redux";
@@ -30,11 +29,11 @@ const Tutorial = ({ id, user, data }) => {
   useEffect(() => {
     data.length === 3
       ? dispatch(getPendingTutor(1, id, setDataTutorialPending)) &&
-      dispatch(getHistoryTutorStudent(id, setDataTutorialHistory))
+        dispatch(getHistoryTutorStudent(id, setDataTutorialHistory))
       : data.length === 4
-        ? dispatch(getPendingTutor(2, id, setDataTutorialPending)) &&
+      ? dispatch(getPendingTutor(2, id, setDataTutorialPending)) &&
         dispatch(getHistoryTutorTeacher(id, setDataTutorialHistory))
-        : dispatch(getHistoryTutor(setDataTutorialHistory));
+      : dispatch(getHistoryTutor(setDataTutorialHistory));
   }, [dispatch, setDataTutorialHistory]);
   return (
     <div className='tutorial'>
@@ -66,12 +65,13 @@ const Tutorial = ({ id, user, data }) => {
             {data.map((title, index) => (
               <th
                 key={index}
-                className={`tutorial-th--${data.length === 3
-                  ? "estudiantes"
-                  : data.length === 4
+                className={`tutorial-th--${
+                  data.length === 3
+                    ? "estudiantes"
+                    : data.length === 4
                     ? "docentes"
                     : "bienestar"
-                  }`}
+                }`}
               >
                 {title}
               </th>
@@ -184,7 +184,6 @@ const Tutorial = ({ id, user, data }) => {
                                   />
                                 </>
                               )}
-
                             </td>
                           </>
                         </tr>

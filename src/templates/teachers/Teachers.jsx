@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getHistoryTutorTeacher } from "../../actions/historyTutor";
-import { getPendingTutor, tutoringProvided } from "../../actions/pendingTutor";
 import { searchStudent } from "../../actions/tutors";
 import ButtonLogout from "../../atoms/buttons/buttonLogout/ButtonLogout";
 import Navbar from "../../molecules/navbar/Navbar";
 import Tutorship from "../../molecules/tutorshipTeacher/TutorshipTeacher";
-import Observation from "../../organism/ observation/Observation";
+import Observation from "../../organism/observation/Observation";
 import Remission from "../../organism/remission/Remission";
 import Tutorial from "../../organism/turorials/Tutorial";
 import "./Teachers.scss";

@@ -3,18 +3,14 @@ import Tutor from "../../molecules/tutor/Tutor";
 import RegisterBienestar from "../../organism/register/registerBienestar/RegisterBienestar";
 import RegisterStudent from "../../organism/register/registerStudent/RegisterStudent";
 import RegisterTeacher from "../../organism/register/registerTeacher/RegisterTeacher";
-import { useDispatch } from "react-redux";
 import "./Bienestar.scss";
 import Remission from "../../organism/remission/Remission";
-import Observation from "../../organism/ observation/Observation";
+import Observation from "../../organism/observation/Observation";
 import Navbar from "../../molecules/navbar/Navbar";
 import ButtonLogout from "../../atoms/buttons/buttonLogout/ButtonLogout";
-import { getHistoryTutor } from "../../actions/historyTutor";
 import Tutorial from "../../organism/turorials/Tutorial";
 
 const Bienestar = () => {
-  const dispatch = useDispatch();
-
   const [tabSelected, setTabSelected] = useState("0");
 
   const tabs = [

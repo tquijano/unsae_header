@@ -8,8 +8,8 @@ const Login = () => {
   const dispatch = useDispatch();
 
   const initialForm = {
-    username: "Admin", //profeh
-    password: "12345",
+    username: "", //profeh
+    password: "",
   };
 
   const [formValues, handleInputChange] = useForm(initialForm);
